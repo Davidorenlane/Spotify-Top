@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,207 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Spotify_Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to view your top Spotify songs and artists " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G25-LT-9p5">
+                                <rect key="frame" x="94.5" y="316.5" width="225" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="7Xz-x7-bEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hep-Fs-Vhz">
+                                <rect key="frame" x="127" y="425.5" width="160" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="eTC-hD-oif"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="v32-eb-BeP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="CONNECT"/>
+                                <connections>
+                                    <action selector="didTapConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAe-PL-od2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be prompted to sign in using the Spotify Web API. This app requires a Spotify Premium subscription." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6v-Lr-Vi2">
+                                <rect key="frame" x="25" y="670.5" width="364" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W6v-Lr-Vi2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="3pU-ih-bSJ"/>
+                            <constraint firstItem="W6v-Lr-Vi2" firstAttribute="top" secondItem="hep-Fs-Vhz" secondAttribute="bottom" constant="200" id="3ve-qH-9G0"/>
+                            <constraint firstItem="G25-LT-9p5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ETp-mg-obw"/>
+                            <constraint firstAttribute="trailing" secondItem="W6v-Lr-Vi2" secondAttribute="trailing" constant="25" id="GOQ-v5-Kun"/>
+                            <constraint firstItem="hep-Fs-Vhz" firstAttribute="top" secondItem="G25-LT-9p5" secondAttribute="bottom" constant="32" id="Rb2-97-3n6"/>
+                            <constraint firstItem="hep-Fs-Vhz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vnw-9t-BEf"/>
+                            <constraint firstItem="W6v-Lr-Vi2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZlA-Xx-SmB"/>
+                            <constraint firstItem="hep-Fs-Vhz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tLr-mq-qpN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="connectButton" destination="hep-Fs-Vhz" id="KkO-N3-pxR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Top50 View Controller-->
+        <scene sceneID="05u-0G-qp8">
+            <objects>
+                <viewController storyboardIdentifier="Top50ViewController" id="APK-74-dgj" customClass="Top50ViewController" customModule="My_Spotify_Analytics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QGW-Cq-SDX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-TS-3ZK">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackartistcell" id="FOD-5L-TBI">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOD-5L-TBI" id="0bR-TK-8fO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="APK-74-dgj" id="vVz-VZ-VYX"/>
+                                    <outlet property="delegate" destination="APK-74-dgj" id="KNO-QC-ByE"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="chS-at-9XC">
+                                <rect key="frame" x="149" y="106" width="255" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="hqQ-ad-65w"/>
+                                    <constraint firstAttribute="height" constant="30" id="mHQ-xw-mjf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="last month"/>
+                                    <segment title="6 months"/>
+                                    <segment title="all time"/>
+                                </segments>
+                                <color key="tintColor" red="0.1176470588" green="0.84313725490000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="timeframeChanged:" destination="APK-74-dgj" eventType="valueChanged" id="HpY-gW-ob9"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xym-uS-1W6">
+                                <rect key="frame" x="0.0" y="787" width="414" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="a1t-E3-adx"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PXH-zD-hRp">
+                                <rect key="frame" x="234" y="61" width="170" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="Go6-vo-HDI"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hde-i0-q8J"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="songs"/>
+                                    <segment title="artists"/>
+                                </segments>
+                                <color key="tintColor" red="0.28913693556056341" green="0.82490647007042261" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="songArtistChanged:" destination="APK-74-dgj" eventType="valueChanged" id="nvb-VU-3Vk"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o2-F7-oRl">
+                                <rect key="frame" x="23" y="105.5" width="58" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-of-ivI">
+                                <rect key="frame" x="0.0" y="787" width="339" height="75"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.84313725490000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="YtC-Ik-GPN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" red="0.1176470588" green="0.84313725490000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="MAKE PLAYLIST">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="makePlaylistButtonTapped:" destination="APK-74-dgj" eventType="touchUpInside" id="AIj-Dc-1ng"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-60-eD0">
+                                <rect key="frame" x="339" y="787" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="e77-92-gfF"/>
+                                    <constraint firstAttribute="width" constant="75" id="prv-i5-thO"/>
+                                </constraints>
+                                <state key="normal" title="(share)" image="ShareIcon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="APK-74-dgj" eventType="touchUpInside" id="Jy2-kn-p9X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cV-N6-Vrj">
+                                <rect key="frame" x="17" y="46" width="160.5" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1cV-N6-Vrj" firstAttribute="top" secondItem="MGF-Qc-vlE" secondAttribute="top" constant="2" id="4LY-KV-GRJ"/>
+                            <constraint firstItem="MGF-Qc-vlE" firstAttribute="bottom" secondItem="gWm-60-eD0" secondAttribute="bottom" id="BDG-co-CPL"/>
+                            <constraint firstItem="MGF-Qc-vlE" firstAttribute="trailing" secondItem="PXH-zD-hRp" secondAttribute="trailing" constant="10" id="Dcz-dI-YmZ"/>
+                            <constraint firstItem="reQ-TS-3ZK" firstAttribute="trailing" secondItem="MGF-Qc-vlE" secondAttribute="trailing" id="Gby-6h-53h"/>
+                            <constraint firstItem="gWm-60-eD0" firstAttribute="trailing" secondItem="MGF-Qc-vlE" secondAttribute="trailing" id="J4D-c8-BHN"/>
+                            <constraint firstItem="7o2-F7-oRl" firstAttribute="leading" secondItem="MGF-Qc-vlE" secondAttribute="leading" constant="23" id="Jv4-Ds-EQy"/>
+                            <constraint firstItem="MGF-Qc-vlE" firstAttribute="trailing" secondItem="chS-at-9XC" secondAttribute="trailing" constant="10" id="MI6-u1-rh9"/>
+                            <constraint firstItem="D6t-of-ivI" firstAttribute="leading" secondItem="MGF-Qc-vlE" secondAttribute="leading" id="Njq-f0-4WC"/>
+                            <constraint firstItem="Xym-uS-1W6" firstAttribute="leading" secondItem="MGF-Qc-vlE" secondAttribute="leading" id="Wd9-B2-Jz2"/>
+                            <constraint firstItem="Xym-uS-1W6" firstAttribute="bottom" secondItem="MGF-Qc-vlE" secondAttribute="bottom" id="Xzl-ME-Xbv"/>
+                            <constraint firstItem="D6t-of-ivI" firstAttribute="bottom" secondItem="MGF-Qc-vlE" secondAttribute="bottom" id="b6B-NI-T0a"/>
+                            <constraint firstItem="MGF-Qc-vlE" firstAttribute="trailing" secondItem="D6t-of-ivI" secondAttribute="trailing" constant="75" id="cKB-bb-CYc"/>
+                            <constraint firstItem="chS-at-9XC" firstAttribute="centerY" secondItem="7o2-F7-oRl" secondAttribute="centerY" id="d60-XS-9Wq"/>
+                            <constraint firstItem="reQ-TS-3ZK" firstAttribute="top" secondItem="chS-at-9XC" secondAttribute="bottom" constant="12" id="hXz-Xu-TWs"/>
+                            <constraint firstItem="1cV-N6-Vrj" firstAttribute="leading" secondItem="MGF-Qc-vlE" secondAttribute="leading" constant="17" id="net-1K-gju"/>
+                            <constraint firstItem="chS-at-9XC" firstAttribute="top" secondItem="1cV-N6-Vrj" secondAttribute="bottom" constant="12" id="nsv-87-73s"/>
+                            <constraint firstItem="chS-at-9XC" firstAttribute="top" secondItem="PXH-zD-hRp" secondAttribute="bottom" constant="15" id="qpS-Da-5kD"/>
+                            <constraint firstItem="reQ-TS-3ZK" firstAttribute="leading" secondItem="MGF-Qc-vlE" secondAttribute="leading" id="szN-Nd-FGV"/>
+                            <constraint firstItem="MGF-Qc-vlE" firstAttribute="trailing" secondItem="Xym-uS-1W6" secondAttribute="trailing" id="wSm-qQ-xH0"/>
+                            <constraint firstItem="reQ-TS-3ZK" firstAttribute="bottom" secondItem="MGF-Qc-vlE" secondAttribute="bottom" id="yGM-8Z-Huj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MGF-Qc-vlE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Td-jR-jsT"/>
+                    <connections>
+                        <outlet property="blockerView" destination="Xym-uS-1W6" id="kd3-Vj-Pfr"/>
+                        <outlet property="makePlaylistButton" destination="D6t-of-ivI" id="8ue-PH-grf"/>
+                        <outlet property="shareButton" destination="gWm-60-eD0" id="XnC-Av-7Hx"/>
+                        <outlet property="songArtistControl" destination="PXH-zD-hRp" id="Bdg-A0-e6W"/>
+                        <outlet property="tableTop50" destination="reQ-TS-3ZK" id="Cr9-he-aqZ"/>
+                        <outlet property="timeframeControl" destination="chS-at-9XC" id="aVr-bX-z0g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUN-rs-1oO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ShareIcon" width="357" height="491"/>
+    </resources>
 </document>
