@@ -17,6 +17,7 @@
 		19D9DE242327298A00D5D578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D9DE232327298A00D5D578 /* Assets.xcassets */; };
 		19D9DE272327298A00D5D578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D9DE252327298A00D5D578 /* LaunchScreen.storyboard */; };
 		19D9DE2F232739F000D5D578 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D9DE2E232739F000D5D578 /* SpotifyiOS.framework */; };
+		19EB5197233A8E920051AE77 /* RemotePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB5196233A8E920051AE77 /* RemotePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		19D9DE262327298A00D5D578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19D9DE282327298A00D5D578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D9DE2E232739F000D5D578 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		19EB5196233A8E920051AE77 /* RemotePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +72,11 @@
 				19D9DE1C2327298700D5D578 /* AppDelegate.swift */,
 				19D9DE1E2327298700D5D578 /* ViewController.swift */,
 				19D9DE232327298A00D5D578 /* Assets.xcassets */,
-				1900DB04232C15BE006A79B4 /* Top50ViewController.swift */,
 				1900DB00232B613D006A79B4 /* DataGetter.swift */,
 				192026ED233148110029B8A4 /* DataPoster.swift */,
+				1900DB04232C15BE006A79B4 /* Top50ViewController.swift */,
 				1900DAFE232AC48C006A79B4 /* SessionOpener.swift */,
+				19EB5196233A8E920051AE77 /* RemotePlayer.swift */,
 				19D9DE202327298700D5D578 /* Main.storyboard */,
 				19D9DE252327298A00D5D578 /* LaunchScreen.storyboard */,
 				19D9DE282327298A00D5D578 /* Info.plist */,
@@ -156,6 +159,7 @@
 				19D9DE1F2327298700D5D578 /* ViewController.swift in Sources */,
 				1900DB01232B613D006A79B4 /* DataGetter.swift in Sources */,
 				1900DB05232C15BE006A79B4 /* Top50ViewController.swift in Sources */,
+				19EB5197233A8E920051AE77 /* RemotePlayer.swift in Sources */,
 				1900DAFF232AC48C006A79B4 /* SessionOpener.swift in Sources */,
 				192026EE233148110029B8A4 /* DataPoster.swift in Sources */,
 				19D9DE1D2327298700D5D578 /* AppDelegate.swift in Sources */,
@@ -305,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SG5FFCL4BX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,6 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidlane.my-spotify-analytics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SG5FFCL4BX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidlane.my-spotify-analytics";
 				PRODUCT_NAME = "$(TARGET_NAME)";

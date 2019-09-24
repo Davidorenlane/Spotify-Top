@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction @objc func didTapConnect(_ sender: Any) {
-        let session = SessionOpener()
-        session.startSession()
+        SessionOpener.shared.startSession()
         connectButton.isEnabled = false
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "authenticatedUser"), object: nil, queue: nil, using: segueToTop50)
         NotificationCenter.default.addObserver(self, selector: #selector(self.presentFailureNotice(_:)), name: NSNotification.Name(ViewController.authenticationFailed), object: nil)

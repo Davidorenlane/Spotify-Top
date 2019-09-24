@@ -8,8 +8,11 @@
 
 import Foundation
 
-class SessionOpener: ViewController, SPTSessionManagerDelegate {
+class SessionOpener: NSObject, SPTSessionManagerDelegate{
     
+    static let shared = SessionOpener()    
+    override private init(){}
+        
     // MARK: - Session Configuration
     
     fileprivate let SpotifyClientID = "0a7b2d8c10324ae99b79352e62c3f65d"
@@ -17,6 +20,10 @@ class SessionOpener: ViewController, SPTSessionManagerDelegate {
     
     lazy var configuration: SPTConfiguration = {
         let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURI)
+        
+        //To wake up Spotify
+        configuration.playURI = ""
+        
         // Set these url's to your backend which contains the secret to exchange for an access token
         //Wifi Networks must match on both devices, IP address of Network 45.50.169.233
         configuration.tokenSwapURL = URL(string: "http://45.50.169.233:93/swap")
@@ -34,7 +41,8 @@ class SessionOpener: ViewController, SPTSessionManagerDelegate {
     func startSession() {
 
         // MARK: - Scopes
-        let scope: SPTScope = [//.appRemoteControl,
+        let scope: SPTScope = [
+            .appRemoteControl,
             .userTopRead,
             .playlistReadPrivate,
             .userLibraryRead,
@@ -47,7 +55,7 @@ class SessionOpener: ViewController, SPTSessionManagerDelegate {
             sessionManager.initiateSession(with: scope, options: .default)
         } else {
             // Use this on iOS versions < 11 to use SFSafariViewController
-            sessionManager.initiateSession(with: scope, options: .default, presenting: self)
+            sessionManager.initiateSession(with: scope, options: .default)//, presenting: self)
         }
     }
     
@@ -60,11 +68,20 @@ class SessionOpener: ViewController, SPTSessionManagerDelegate {
         //self.presentAlertController(title: "Session Renewed", message: session.description, buttonTitle: "Sweet")
     }
     
+    
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
+        DispatchQueue.main.async{
+            RemotePlayer.shared.appRemote.connectionParameters.accessToken = session.accessToken
+            print(session.accessToken)
+            RemotePlayer.shared.appRemote.connect()
+            
+        }
         //Notifies ViewController.swift that i is ready for transition to top50VC
         NotificationCenter.default.post(name: NSNotification.Name(ViewController.authenticatedUser), object: nil, userInfo: ["token": session.accessToken])
         
+        
     }
+    
     
 }
 
