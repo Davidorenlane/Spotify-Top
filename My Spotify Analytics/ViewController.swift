@@ -42,7 +42,8 @@ class ViewController: UIViewController {
             destinationViewController.tracksAndArtists = tuple.0
             destinationViewController.trackURIs = tuple.1
 
-            self.present(destinationViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(destinationViewController, animated: true)
+            
         }
     }
     
@@ -89,6 +90,7 @@ extension ViewController {
         controller.addAction(action)
         present(controller, animated: true)
     }
+    
 }
 
 

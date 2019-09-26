@@ -74,7 +74,6 @@ class SessionOpener: NSObject, SPTSessionManagerDelegate{
             RemotePlayer.shared.appRemote.connectionParameters.accessToken = session.accessToken
             print(session.accessToken)
             RemotePlayer.shared.appRemote.connect()
-            
         }
         //Notifies ViewController.swift that i is ready for transition to top50VC
         NotificationCenter.default.post(name: NSNotification.Name(ViewController.authenticatedUser), object: nil, userInfo: ["token": session.accessToken])

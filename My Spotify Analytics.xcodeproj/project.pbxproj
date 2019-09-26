@@ -26,7 +26,7 @@
 		1900DB04232C15BE006A79B4 /* Top50ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top50ViewController.swift; sourceTree = "<group>"; };
 		192026ED233148110029B8A4 /* DataPoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoster.swift; sourceTree = "<group>"; };
 		192B234C23276C4C003430B5 /* My-Spotify-Analytics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My-Spotify-Analytics-Bridging-Header.h"; sourceTree = "<group>"; };
-		19D9DE192327298700D5D578 /* My Spotify Analytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Spotify Analytics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D9DE192327298700D5D578 /* Spotify Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D9DE1C2327298700D5D578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19D9DE1E2327298700D5D578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19D9DE212327298700D5D578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		19D9DE1A2327298700D5D578 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19D9DE192327298700D5D578 /* My Spotify Analytics.app */,
+				19D9DE192327298700D5D578 /* Spotify Top.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			);
 			name = "My Spotify Analytics";
 			productName = "My Spotify Analytics";
-			productReference = 19D9DE192327298700D5D578 /* My Spotify Analytics.app */;
+			productReference = 19D9DE192327298700D5D578 /* Spotify Top.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SG5FFCL4BX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,7 +323,7 @@
 				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidlane.my-spotify-analytics";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spotify Top";
 				SWIFT_OBJC_BRIDGING_HEADER = "My-Spotify-Analytics-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -336,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SG5FFCL4BX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,7 +350,7 @@
 				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidlane.my-spotify-analytics";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spotify Top";
 				SWIFT_OBJC_BRIDGING_HEADER = "My-Spotify-Analytics-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
